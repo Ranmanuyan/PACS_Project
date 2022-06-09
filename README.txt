@@ -1,3 +1,5 @@
+** README ** 
+
 This project is the exam project "Implementation of branch and bound algorithm for stochastic scheduling problems---using bob++ library" for course Advanced Programming for Scientific Computing of POLIMI.
 All the codes are wrote and tested in  g++ under Mac/Unix system.
 Please make sure everything is downloaded, including the "." hidden files.
@@ -5,6 +7,8 @@ Please make sure everything is downloaded, including the "." hidden files.
 
 Installation of libraries and guideline for codes are presented here.
 
+
+** *Installation* ** 
 Firstly, to run this project, several packages(bobpp, Eigen and Boost) need to be installed:
 
 1, bob++ lirary is a library for the development of branch and bound algorithm, which is provided in this project, i.e., the folder bobpp_lib.
@@ -43,6 +47,8 @@ Boost library is optional in this project, several alternative functions used it
 
 Now all the related libraries are installed.
 
+
+** *Run the codes* ** 
 How to run the project code?
 
 1, Open Terminal, cd into the src folder.
