@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: bobpp_mpi
+Description: Bob++ MPI programming environment
+Requires: 
+Version: 0.3.0
+Libs: -L${libdir} -lbobpp_mpi
+Cflags: -I${includedir}/bobpp-1.0

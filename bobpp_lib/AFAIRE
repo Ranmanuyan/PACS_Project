@@ -1,0 +1,72 @@
+
+moorea:~/Dev/bobpp/src> cp bob_exacalgo.h bob_sens.h
+moorea:~/Dev/bobpp/src> cp bob_exacalgo.h bob_schedalgo.h
+moorea:~/Dev/bobpp/src> cp bob_exacalgo.h bob_cost.h
+moorea:~/Dev/bobpp/src> cp bob_exacalgo.h bob_eval.h
+Nouveau fichier a modifier.
+Fait.
+
+---------------------
+Decider de l'architecture bobpp avec les Algorithmes.
+---
+BaseProblem, BaseAlgo, BaseInstance et BaseNode non templatises
+FAIT
+
+Niveau Templatisé herite des Non templatise.
+
+
+Un Bob::Problem : Tous les processus en ont un.
+        Instancie avec le trait.
+	Non Statique
+
+Une classe Bob::Instance, on peut recuperer un pointeur sur un BaseInstance par une methode 
+getBaseInstance de la classe BaseProblem.
+ou getInstance de la classe Bob::Problem<Trait>
+
+On a donc un 
+Un Bob::Problem.Id
+Un Bob::Instance.Id
+
+Interface avec l'environnement parallele.
+1-  Lancement de l'operator() de la classe Instance, resoud le probleme avec l'EnvProg linké.
+    Pas de choix d'EnvProg paralleles ou sequentiels.
+2-  Instancier la classe problem avec un type EnvProg sequentiel ou parallel...
+    1 type d'env parallele.
+    1 type d'env sequentiel
+    On peut recuperer un type d'instance parallele ou sequentiel
+3 - Une classe Envprog templatisee qui prend Le Trait en parametre.
+    Appel de l'EnvProg::operateur(), resoud l'instance du probleme passe en parametre.
+    Appel de l'EnvProg::operateur(), resoud une sous arborescence avec un noeud en parametre pour l'instance passée en paramêtre.
+    Attention : Environement de la recherche 
+    	BB : la solution ?.
+	DC : la solution ?
+	DP : l'expace d'etats ?
+	AS : l'expace d'etats ?
+
+La 3 parait la mieux.
+Un envprog par algo.
+L'info disparait au profit de la class Instance. Les options sont dans le probleme.
+La lecture et initialisation de cette instance se fait par ou on veut
+
+
+---------------------
+C'est OK cette partie.
+Les algorithmes, les noeuds et les files de priorites...
+---
+
+Le priorites :
+deux noeuds sont comparables selon leur priorite dans la file de priorite, et selon leur
+evaluation ou cout (comparaison si le noeud est meilleur ou non).
+leur comparaison selon le cout ou evaluation est interne car elle cette notion est intrinseque au noeud.
+En revanche leur comparaison selon leur priorite ne peut etre qu'externe.
+Ancienne version de bob, une priorite avait un allocateur associe, car on voulait eviter de templatiser la file de priorite. En revanche maintenant, la file doit etre templatiser
+pour avoir acces a la totalite des types en interne, donc pas de probleme
+
+Un algo necessite la creation de structures de données locales a cet algorithme
+Une structure peut etre partagée par plusieurs algorithmes, de meme Problem.Id et Instance.Id.
+Leur creation ne peuvent passer que par l'environnement de programmation.
+Ce qui siginifie que l'environement de prog doit etre templatiser aussi par l'algo
+
+Lors de la creation d'algo, ils demandent a leur EnvProg preferee une ou plusieurs structures de données.
+
+

@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: bobpp_cell
+Description: Bob++ Cell Broadband Engine programming environment
+Requires: 
+Version: @VERSION@
+Libs: -L${libdir} -lbobpp_cell -lspe2 -lpthread
+Cflags: -I${includedir}/bobpp-1.0

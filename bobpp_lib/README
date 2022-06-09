@@ -1,0 +1,27 @@
+Bob++
+
+Authors:
+    Bertrand Le Cun, 
+    François Galea 
+    Pascal Vander-Swalmen
+    Tarek Menouer
+
+Introduction
+============
+
+The Bob++ Library is a set of C++ classes. Its goal is to allow easy
+implementation of sequential and parallel search algorithms (Branch and X,
+Divide and conquer, etc) to solve your own problems.
+
+Features
+========
+
+ * Object Oriented
+ * Several Search Algorithms User Algorithms
+ * Automatic Options and Parameters Handling ( see The Options Module).
+ * Error Handling
+ * transparent parallelizations (POSIX Thread, MPI, Kaapi)
+
+More information, visit the official project website:
+http://forge.prism.uvsq.fr/projects/bobpp
+

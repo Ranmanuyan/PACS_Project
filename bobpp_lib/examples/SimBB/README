@@ -1,0 +1,18 @@
+
+Here you will find different programs for testing Branch and Bound with 
+different programming environment of Bob++.
+
+seq.cpp, thr.cpp and atha.cpp are the same Branch and Bound simulation.
+In fact the subproblems are generated randomly.
+
+To see the possible Bob++ parameters simply type <program> -help.
+To see the possible Kaapi/Athapascan parameter simply execute <program> --help
+
+./bbatha --community -thread.poolsize 2 -ps.enable -term.period 2000
+executes the simulation with 2 threads. This is interesting on a SMP machine.
+
+mip.cpp is an implementation of a real Branch and Bound solving a linear
+program with in a lp format.  The file roy.lp is an example of one of these.
+This exemple also shows how to have one source code to generate 2 executables 
+i.e. mipseq and mipthr. 
+

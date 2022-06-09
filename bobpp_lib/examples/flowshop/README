@@ -1,0 +1,8 @@
+
+ This directory contains flowshop resolutions.
+ Two differents resolutions are proposed
+ 	1 Divide and conquer resolution in the DC directory.
+ 	2 Branch and Bound resolution in the BB directory.
+
+
+author : Bertrand Le Cun

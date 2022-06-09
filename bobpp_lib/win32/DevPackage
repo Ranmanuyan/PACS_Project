@@ -1,0 +1,18 @@
+[Setup]
+Version=1
+AppName=Bob++
+AppVersion=svn
+AppVerName=Bob++
+MenuName=bobpp
+Description=Bob++ : A framework for parallel computing applications
+Url=https://software.prism.uvsq.fr/bobpp/
+License=
+Readme=
+Dependencies=
+
+[Files]
+include=<app>\include\
+lib=<app>\lib\
+Templates=<app>\Templates\
+docs=<app>\docs\
+bin=<app>\bin\

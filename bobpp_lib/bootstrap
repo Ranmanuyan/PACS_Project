@@ -1,0 +1,63 @@
+#!/bin/sh
+# This script has two major functions :
+#  - When run with the "clean" argument, wipes out any of the auto-generated
+#    files that aren't part of the subversion tree.
+#  - When run with no argument, generates all the necessary files, especially
+#    the configure script.
+#
+
+if [ "$1" = "clean" ]
+then
+  test -f examples/Makefile && make -C examples distclean 
+  test -f Makefile && make distclean
+  for i in \
+    configure \
+    Makefile.in \
+    config.log \
+    depcomp \
+    compile \
+    config.guess \
+    config.h \
+    config.sub \
+    ltmain.sh \
+    bobpp.pc \
+    INSTALL \
+    COPYING \
+    Makefile \
+    config.status \
+    stamp-h1 \
+    config.h.in \
+    autom4te.cache \
+    libtool \
+    missing \
+    aclocal.m4 \
+    install-sh \
+    tools/Makefile.in \
+    bobpp/Makefile.in \
+    bobpp/ilp/Makefile.in \
+    bobpp/ilp/bob_branch.loT \
+    bobpp/thr/Makefile.in \
+    bobpp/mpx/Makefile.in \
+    bobpp/atha/Makefile.in \
+    examples/Makefile.in \
+    examples/Qap/Makefile.in \
+    examples/flowshop/Makefile.in \
+    examples/flowshop/BB/Makefile.in \
+    examples/flowshop/DC/Makefile.in \
+    examples/Tests/Makefile.in \
+    examples/Mip_Cuts/Makefile.in \
+    examples/Mip_Bobo/Makefile.in \
+    examples/SimBB/Makefile.in \
+    examples/ks/Makefile.in \
+    examples/queen/Makefile.in \
+    examples/Mip_Simple/Makefile.in
+  do
+    rm -rf $i
+  done
+else
+  aclocal || exit 1
+  libtoolize --copy --force || exit 1
+  autoconf || exit 1
+  autoheader || exit 1
+  automake --add-missing --copy || exit 1
+fi

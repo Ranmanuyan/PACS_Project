@@ -1,0 +1,66 @@
+
+Le 01/02/2007
+
+Voila les choses à faire dans l'ordre deccroissant des urgences
+
+1 - Verifier et eclaircir la documentation (d'ici un ou 2 mois).
+
+2 - Finir la version athapascan avec les monotonic bounds et faire une génération 
+de log compatible avec le logview de François. La version corrigée
+d'athapascan/Kaapi devrait arriver mi-fevrier (d'ici un ou deux mois).
+
+3 - Intégrer le logview dans la doc (d'ici un mois).
+
+4 - Faire le serveur TRAC (Très très mais alors très vite)
+
+5 - Application : QAP (version P. Hahn, assez rapide à faire) 
+
+6 - Application : Q3AP (voir avec Van-Dat) (on a un an).
+
+7 - Ecrire un environment MPC et/ou MPI, les interfaces de ces deux lib sont très 
+similaires (Très vite aussi).
+
+8 - Application QAP (version SDP) (c'est une idée à voir avec les personnes de 
+SDP monter un projet du GDR RO par exemple).
+
+9 - Problème d'interface des algorithmes sur le but à atteindre. 
+Actuellement, pour les algos :
+   BB les n meilleures solutions
+   CDC les n meilleures solutions
+   SDC une solution réalisable
+Prévu dans les algo non implémentés pour l'instant :
+   A* les n meilleures solutions
+   DP les n meilleures solutions
+Le problème est que le but de certains problèmes est de compter le nombre de solutions 
+optimales ou réalisables. Ce critère de terminaison n'est pas compatible avec 
+l'actuelle conception des algorithmes.
+
+A plus longue échéance
+
+10 - Une couche haute d'écriture de BB avec Solver. François a ecrit une version d'une 
+application où on donne un PL au format .lp et hop cela le resoud.
+J'aimerais, ce serait bien, une interface C++ de definition de problème à la FlopC++.
+utilisant Glop ou OSI, comme on veut... Il devra etre possible dans cette version de 
+faire du Branch and Price/Cut où on peut rajouter des contraintes et/ou des variables
+durant les phases d'évaluation.
+
+11 - Autres alorithmes : DP et A*, cela demande de bien reflechir sur la notion de 
+clef, configuration, codage d'un état (appelez-le comme vou voulez), à rattacher 
+à un noeud. J'avais déjà une version de cela dans une précédente version de Bob++.
+
+12 - Interface à la FlopC++ pour la programmation dynamique.
+On construit une fonction de récurrence et hop, ça la résoud.
+Du genre (mais il reste des choses à faire, ces types peuvent être 
+aussi une récupération des types de la couche 10): 
+expr<int> PCC;
+State<int> etat;
+Data<int,int> cost;
+Indice i,j;
+PCC = forall( i, etat(i) = min(etat(j)+cost(i,j))
+
+13 - le top du top, faire une application de VRP (Vehicule routing problem), 
+où le problème de partition est faite avec la couche indiqué en 10, et la génération 
+de colonne générée avec le point 12.
+
+
+

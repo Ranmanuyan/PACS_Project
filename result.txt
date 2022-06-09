@@ -1,0 +1,1 @@
+InstanceID	Job_number	alpha	Threads_num	VaR_solution	Core_time	Evaluated Nodes	

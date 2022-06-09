@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: bobpp_lp
+Description: LP module of Branch and Bound Library.
+Requires: 
+Version: 0.3.0
+Libs: -L${libdir} -lbobpp-1.0  -lpthread
+Cflags: -I${includedir}/bobpp-1.0 

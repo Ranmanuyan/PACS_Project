@@ -1,0 +1,14 @@
+# Bob++ indentation rules for Artistic Style (http://astyle.sourceforge.net/)
+#
+# You can automatically indent your code using these rules with the 
+# command : astyle --options=bobpp/docsrc/astyle mycode.cpp
+# 
+#
+# set 2 spaces per indent
+indent=spaces=2
+# brackets should be attached to pre-bracket lines
+brackets=attach
+# add padding spaces to operators
+pad=oper
+# remove padding spaces inside parenthesis
+unpad=paren
