@@ -33,16 +33,14 @@ If everything is ok, the installation of bobpp should be successful.
 
 The Installation of Eigen library should follow the steps:
 
-1, In order to use Eigen, you just need to download and extract Eigen's source code, the only thing is remember the installation path (If it has already been installed, check the installation path), and match it in source code files, i.e., /src/pfs.h, line 
-lb.h" and "pfs.h", make sure the Eigen related library import path is correct, i.e. "#include <Eigen/unsupported/Eigen/MatrixFunctions>", "#include <Eigen/Core>", "#include <Eigen/Dense>"...
+1, In order to use Eigen, you just need to download and extract Eigen's source code,  copy the Eigen folder into "/usr/local/include/", (If eigen has already been installed, check the path of MatrixFunctions, Core, Dense, i.e., /src/pfs.h, line 19,20,21, /src/lb.cpp, line 17,18,19("#include <Eigen/unsupported/Eigen/MatrixFunctions>", "#include <Eigen/Core>", "#include <Eigen/Dense>"), make sure it is consistant with your installation folders)
+
 
 
 Boost library is optional in this project, several alternative functions used it, it can be commented and run without boost library.
-1, If you didn't install boost in your laptop, you can download it https://www.boost.org/users/history/version_1_79_0.html
+1, If you didn't install boost in your laptop, you can download it https://www.boost.org/users/history/version_1_79_0.html, and follow the guideline of "https://www.boost.org/doc/libs/1_79_0/more/getting_started/unix-variants.html#get-boost".
 
-2, unpack it, and "cd" go to the folder, then run "./bootstrap.sh", then run  "./b2", and then run "./b2 install".
-
-3, remember the insatll path of boost library, and add it in Makefile, which is located src/Makefile, line 113, CXX = g++   -I
+2, Defaultly, the path to the boost root directory  is "/usr/local/boost_1_73_0", and it has been added in Makefile, which is located src/Makefile, line 113, CXX = g++ -std=c++11 -I /usr/local/boost_1_73_0, here "/usr/local/boost_1_73_0", if it's not the case in your laptop, replace this line with your own one.
 
 
 Now all the related libraries are installed.
