@@ -43,7 +43,7 @@ Boost library is optional in this project, several alternative functions used it
 2, Defaultly, the path to the boost root directory  is "/usr/local/boost_1_73_0", and it has been added in Makefile, which is located src/Makefile, line 113, CXX = g++ -std=c++11 -I /usr/local/boost_1_73_0, here "/usr/local/boost_1_73_0", if it's not the case in your laptop, replace this line with your own one.
 
 
-Now all the related libraries are installed.
+Note that old version of boost library and Eigen library is enough, no need the latest version. Now all the related libraries are installed. 
 
 
 ** *Run the codes* ** 

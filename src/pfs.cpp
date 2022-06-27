@@ -2,7 +2,7 @@
 * @Author: Lei Liu
 * @Date:   2021-05-27 15:57:26
 * @Last Modified by:   Lei Liu
-* @Last Modified time: 2022-06-09 17:15:16
+* @Last Modified time: 2022-06-18 16:57:27
 */
 
 
@@ -434,10 +434,6 @@ double Scheduled::false_pos(MatrixXd Qstar, double VaRalpha, VectorXd a,double x
 
     return x2;
 }
-
-
-
-
 
 // Illinois Algorithm : improved false-postion method
 double Scheduled::Illinois(MatrixXd Qstar,  double VaRalpha, VectorXd a,double x1,  double x2){
