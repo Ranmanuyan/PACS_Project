@@ -23,7 +23,7 @@ This will configure, build and install this package, no further work described i
 
 
 2, Check the installation
-    By default, `make install' installs the package's commands under `/usr/local/bin', and include files under `/usr/local/include', etc.
+    By default, `make install` installs the package's commands under `/usr/local/bin`, and include files under `/usr/local/include`, etc.
     we can check:
     a. INCLUDE DIR: Go to the folder "/usr/local/include”, you will find a folder named “bobpp-1,0/bobpp”, here you will find the needed headers (.h files) that are needed to include the bob library in your projects.
     b. LIB DIR: Folder "/usr/local/lib", here you will find a set of libraries (e.g., libbobpp-1.0.dylib) already compiled, to be added to your projects 
@@ -33,7 +33,7 @@ If everything is ok, the installation of bobpp should be successful.
 
 The Installation of Eigen library should follow the steps:
 
-1, In order to use Eigen, you just need to download and extract Eigen's source code,  copy the Eigen folder into "/usr/local/include/", (If eigen has already been installed, check the path of MatrixFunctions, Core, Dense, i.e., /src/pfs.h, line 19,20,21, /src/lb.cpp, line 17,18,19("#include <Eigen/unsupported/Eigen/MatrixFunctions>", "#include <Eigen/Core>", "#include <Eigen/Dense>"), make sure it is consistant with your installation folders)
+1, In order to use Eigen, you just need to download and extract Eigen's source code,  copy the Eigen folder into "/usr/local/include/", (If eigen has already been installed, check the path of MatrixFunctions, Core, Dense, i.e., /src/pfs.h, line 19,20,21, /src/lb.cpp, line 17,18,19(`#include <Eigen/unsupported/Eigen/MatrixFunctions>`, `#include <Eigen/Core>`, `#include <Eigen/Dense>`), make sure it is consistant with your installation folders)
 
 
 
