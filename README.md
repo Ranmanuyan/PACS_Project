@@ -18,12 +18,12 @@ Firstly, to run this project, several packages(bobpp, Eigen and Boost) need to b
 
 The Installation of bob++ lirary should follow the steps:
 
-1, Open the Terminal, cd go to folder "bobpp_lib", input: "./configure; make; make install"(wiithout""), press enter.
+1, Open the Terminal, cd go to folder "bobpp_lib", input: `./configure; make; make install`, press enter.
 This will configure, build and install this package, no further work described in the INSTALL file need to be done.
 
 
 2, Check the installation
-    By default, `make install` installs the package's commands under `/usr/local/bin`, and include files under `/usr/local/include`, etc.
+    By default, the command in first step installs the package's commands under `/usr/local/bin`, and include files under `/usr/local/include`, etc.
     we can check:
     a. INCLUDE DIR: Go to the folder "/usr/local/include”, you will find a folder named “bobpp-1,0/bobpp”, here you will find the needed headers (.h files) that are needed to include the bob library in your projects.
     b. LIB DIR: Folder "/usr/local/lib", here you will find a set of libraries (e.g., libbobpp-1.0.dylib) already compiled, to be added to your projects 
