@@ -60,3 +60,6 @@ How to run the project code?
 5, Data file name will be asked to be input, I have put the data file in project folder, so input $: `../data.txt`, then `return`.
 
 6, The algorithm is running in the Terminal, and the results are collected in result.txt in project folder.
+
+## *License*
+This project is licensed under the terms of GNU General Public License `gpl`.
