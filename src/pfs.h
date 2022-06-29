@@ -76,6 +76,12 @@ public:
       static double false_pos(MatrixXd Qstar, double VaRalpha, VectorXd a,double x1, double x2);
       static double Illinois(MatrixXd Qstar,  double VaRalpha, VectorXd a,double x1,  double x2);
       static double cdfCal(MatrixXd Qstar, VectorXd a, double x1);
+      static double cdfCal2( MatrixXd A,  VectorXd v, double x1);
+      void balance_matrix(Eigen::MatrixXd &A, Eigen::MatrixXd &Aprime, Eigen::MatrixXd &D);
+      void calAlpha(MatrixXd A, std::vector<int> mList, std::vector<double> thetaList, int &sNum, int &numM);
+      void sANDm(int &sNum, int &numM, MatrixXd A);
+      double CAM_algo(MatrixXd &A, VectorXd &v, double t);
+      double cdfCal3( MatrixXd A,  VectorXd v, double x1);
       
 
       /// Pack method to serialize the BobNode
