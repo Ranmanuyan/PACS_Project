@@ -1,6 +1,6 @@
 ## README
 
-This project is the exam project "Implementation of branch and bound algorithm for stochastic scheduling problems---using bob++ library" for course Advanced Programming for Scientific Computing of POLIMI.
+This project is the exam project "Implementation of branch and bound algorithm for stochastic 2-machine flow shop scheduling problems---using bob++ library" for course Advanced Programming for Scientific Computing of POLIMI.
 All the codes are wrote and tested in  g++ under Mac/Unix system.
 Please make sure everything is downloaded, including the "." hidden files.
 
@@ -49,11 +49,11 @@ Note that old version of boost library and Eigen library is enough, no need the 
 ## *Run the codes* 
 How to run the project code?
 
-1, Open Terminal, `cd` into the src folder.
+1, Open Terminal, `cd` into the `src` folder.
 
 2, Compile the project with the command: $ `make`
 
-3, After successful compiling, we can see exectuable fils "pfs" and "pfsthr" in this same folder, otherwise the compile failed. 
+3, After successful compiling, we can see exectuable fils `pfs` and `pfsthr` in this same folder, otherwise the compile failed. 
 
 4, Now, run the executable file, $ `./pfs`
 
